@@ -1,0 +1,132 @@
+<!-- <h2 class="text-center">Add Products</h2>
+<div class="container">
+<div class="row">
+    <div class="col-md-2 "></div>
+    <div class="col-md-8 ">
+    <form  [formGroup] = 'addform' (ngSubmit) ="submit()" class="form-group">
+        <div class="input-group nb-3">
+        <input formControlName='title'
+        type ="text"
+        class="form-control"
+        placeholder="Enter Title">
+    </div>
+        <div class="input-group nb-3">
+        <input formControlName ='price'
+        type ="number"
+        class ="form-control"
+        placeholder="Enter Price">
+    </div>
+    <div class="input-group nb-3">
+        <input formControlName ='quantity'
+        type ="number"
+        class ="form-control"
+        placeholder="Enter Quantity">
+    </div>
+        
+    <div class="input-group nb-3">
+         <input formControlName='color'
+        type ="text"
+        class="form-control"
+        placeholder="Enter Color">
+    </div>
+
+    <div class="input-group nb-3">
+        <input formControlName='expirydate'
+        type ="text"
+        class="form-control"
+        placeholder="Enter Expiry Date" onclick="(this.type='date')" onkeyup="(this.type='date')">    
+    </div>       
+    <label>Status:</label><br>
+    <div class="form-check form-check-inline">
+    <input class= "form-check-input" formControlName="inStock" type="radio" [value] ="true">
+        <label class="form-check-label" for="inlineradio1">In Stock</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class= "form-check-input" formControlName="inStock" type="radio" [value] ="false">
+                <label class="form-check-label" for="inlineradio2">Out of Stock</label>
+                </div>
+   <br>
+   <br>
+    <button type="submit" [disabled] = "addform.invalid" class="btn btn-danger">Add</button>
+    <button type="reset" class="btn btn-info">Reset</button>
+    </form>
+</div>
+<div class="col-md-2 ">
+
+</div> 
+</div>
+</div>
+-->
+
+
+
+
+
+
+
+<h2>Add Products</h2>
+<div class="container">
+<div class="row">
+    <div class="col-md-2 ">
+
+    </div>
+    <div class="col-md-8 ">
+    <form  [formGroup] = 'addform' (ngSubmit) ="submit()" class="form-group">
+
+    <div class="form-group">
+            <label for="titlename">Enter Title</label>
+        <input formControlName='title'
+        type ="text"
+        class="form-control" id="titlename"        placeholder="Enter Title">
+    </div>
+    <div class="form-group">
+            <label for="forprice">Enter Price</label>
+        <input formControlName ='price'
+        type ="number"
+        class ="form-control" id="forprice"
+        placeholder="Price">
+    </div>
+    <div class="form-group">
+        <label for="forquantity">Enter Quantity</label>
+        <input formControlName ='quantity'
+        type ="number"
+        class ="form-control" id="forquantity"
+        placeholder="Quantity">
+    </div>
+        
+    <div class="form-group">
+        <label for="forcolor">Enter Color</label>
+         <input formControlName='color'
+        type ="text"
+        class="form-control" id="forcolor"
+        placeholder="Color">
+    </div>
+
+    <div class="form-group">
+        <label for="fordate">Enter Expiry Date</label>
+        <input formControlName='expirydate'
+        type ="text"
+        class="form-control" id="fordate"
+        placeholder="Enter Expiry Date" onclick="(this.type='date')" onkeyup="(this.type='date')">    
+    </div>       
+    <label>Status:</label><br>
+    <div class="form-check form-check-inline">
+        <input class= "form-check-input" formControlName="inStock" type="radio" [value] ="true">
+        <label class="form-check-label" for="inlineradio1">In Stock</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class= "form-check-input" formControlName="inStock" type="radio" [value] ="false">
+        <label class="form-check-label" for="inlineradio2">Out of Stock</label>
+    </div>
+   <br>
+   <br>
+    <button type="submit" [disabled] = "addform.invalid" class="btn btn-danger">Add</button>
+    <button type="reset" class="btn btn-info">Reset</button>
+    </form>
+</div>
+<div class="col-md-2 ">
+
+</div>
+</div> 
+
+</div>  
