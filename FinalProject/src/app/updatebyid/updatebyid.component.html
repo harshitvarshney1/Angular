@@ -1,0 +1,75 @@
+<div class="container">
+<h2 class="text-center">Update Product</h2>
+<div class="row">
+<div class="col-md-2 ">
+
+</div>
+<div class="col-md-8 ">
+     <div class="form-group">
+
+<form [formGroup] = 'editform'  class="form-group">
+
+    <div class="form-group">
+        <label for="idname">Enter id</label>
+    <input formControlName="id"
+    type ="number"
+    class="form-control" id="idname"  placeholder="Enter id" readonly>
+   </div>
+
+<div class="form-group">
+        <label for="titlename">Enter Title</label>
+    <input formControlName="title"
+    type ="text"
+    class="form-control" id="titlename"  placeholder="Enter Title">
+</div>
+<div class="form-group">
+        <label for="forprice">Enter Price</label>
+    <input formControlName ="price"
+    type ="number"
+    class ="form-control" id="forprice"
+    placeholder="Enter Price">
+</div>  
+<div class="form-group">
+       <label for="forquantity">Enter Quantity</label>
+       <input formControlName ='quantity'
+       type ="number"
+       class ="form-control" id="forquantity"
+       placeholder="Enter Quantity">
+   </div>
+
+   <div class="form-group">
+       <label for="forcolor">Enter Color</label>
+        <input formControlName='color'
+       type ="text"
+       class="form-control" id="forcolor"
+       placeholder="Enter Color">
+   </div>
+
+   <div class="form-group">
+       <label for="fordate">Enter Expiry Date</label>
+       <input formControlName='expirydate'
+       type ="date"
+       class="form-control" id="fordate"
+       placeholder="Enter Expiry Date" onclick="(this.type='date')" onkeyup="(this.type='date')">    
+   </div>       
+   <label>Status:</label><br>
+   <div class="form-check form-check-inline">
+       <input class= "form-check-input" formControlName="inStock" type="radio" [value] ="true">
+       <label class="form-check-label" for="inlineradio1">In Stock</label>
+   </div>
+   <div class="form-check form-check-inline">
+       <input class= "form-check-input" formControlName="inStock" type="radio" [value] ="false">
+       <label class="form-check-label" for="inlineradio2">Out of Stock</label>
+   </div>
+  <br>
+  <br>
+   <button type="button" [disabled] = "editform.invalid" class="btn btn-outline-dark btn-block" (click)="update()">Update</button>
+   </form>
+ </div>
+ <div class="col-md-2 ">
+
+ </div>
+ </div> 
+
+ </div>
+

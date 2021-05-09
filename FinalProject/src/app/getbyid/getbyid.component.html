@@ -1,0 +1,47 @@
+<h2 class="text-center">Find Product</h2>
+<div class="container">
+<div class="row">
+    <div class="col-md-6 ">
+        
+     <form  [formGroup] = 'addform' (ngSubmit) ="submit()" class="form-group" novalidate>
+        
+    <div class="form-group">
+            <label for="titlename">Enter Id</label>
+        <input formControlName='id'
+        type ="number"
+        class="form-control" id="titlename" placeholder="Enter Id">
+    </div>
+   
+    <button type="submit" [disabled] = "addform.invalid" class="btn btn-danger"><mat-icon>search</mat-icon></button>
+    </form>  
+</div>
+ <div class="col-md-6">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>           
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Color</th>
+                    <th>Expirydate</th>
+                    <th>In Stock</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{product.id}}</td>
+                <td>{{product.title}}</td>
+                <td>{{product.price}}</td>
+                <td>{{product.quantity}}</td>
+                <td>{{product.color}}</td>
+                <td>{{product.expiryDate}}</td>
+                <td>{{product.inStock}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div> 
+
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-2">
+            
+        </div>
+        <div class="col-md-8">
+            <mat-tab-group>           
+                <mat-tab label="With Async Pipe"> <app-listproductwithasync [items$]= "products" (deleteevent)='deleteitem($event)'></app-listproductwithasync> </mat-tab>           
+                <mat-tab label="With Subscribe Method"> <app-listproductwithsubscribe [items$]= "products" (deleteevent)='deleteitem($event)'></app-listproductwithsubscribe> </mat-tab>          
+                <mat-tab label="With Material Table">  <app-listwithmaterialtable [items$]= "products" (deleteevent)='deleteitem($event)'></app-listwithmaterialtable></mat-tab>           
+            </mat-tab-group>
+        </div>
+    </div>
+</div>
